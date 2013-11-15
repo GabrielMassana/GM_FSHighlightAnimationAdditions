@@ -21,6 +21,8 @@
 		D79B6D5118366BB200A07182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B6D3318366BB100A07182 /* UIKit.framework */; };
 		D79B6D5918366BB200A07182 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D79B6D5718366BB200A07182 /* InfoPlist.strings */; };
 		D79B6D5B18366BB200A07182 /* HighlightAnimationAdditionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D79B6D5A18366BB200A07182 /* HighlightAnimationAdditionsTests.m */; };
+		D79B6D6818366BD300A07182 /* GM_FSHighlightAnimationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D79B6D6618366BD300A07182 /* GM_FSHighlightAnimationAdditions.m */; };
+		D79B6D6918366BD300A07182 /* Mask.png in Resources */ = {isa = PBXBuildFile; fileRef = D79B6D6718366BD300A07182 /* Mask.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		D79B6D5618366BB200A07182 /* HighlightAnimationAdditionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HighlightAnimationAdditionsTests-Info.plist"; sourceTree = "<group>"; };
 		D79B6D5818366BB200A07182 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D79B6D5A18366BB200A07182 /* HighlightAnimationAdditionsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighlightAnimationAdditionsTests.m; sourceTree = "<group>"; };
+		D79B6D6518366BD300A07182 /* GM_FSHighlightAnimationAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GM_FSHighlightAnimationAdditions.h; sourceTree = "<group>"; };
+		D79B6D6618366BD300A07182 /* GM_FSHighlightAnimationAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GM_FSHighlightAnimationAdditions.m; sourceTree = "<group>"; };
+		D79B6D6718366BD300A07182 /* Mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mask.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,7 @@
 		D79B6D2318366BB100A07182 = {
 			isa = PBXGroup;
 			children = (
+				D79B6D6418366BD300A07182 /* GM_FSHighlightAnimationAdditions */,
 				D79B6D3518366BB100A07182 /* HighlightAnimationAdditions */,
 				D79B6D5418366BB200A07182 /* HighlightAnimationAdditionsTests */,
 				D79B6D2E18366BB100A07182 /* Frameworks */,
@@ -150,6 +156,17 @@
 				D79B6D5718366BB200A07182 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D79B6D6418366BD300A07182 /* GM_FSHighlightAnimationAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				D79B6D6518366BD300A07182 /* GM_FSHighlightAnimationAdditions.h */,
+				D79B6D6618366BD300A07182 /* GM_FSHighlightAnimationAdditions.m */,
+				D79B6D6718366BD300A07182 /* Mask.png */,
+			);
+			name = GM_FSHighlightAnimationAdditions;
+			path = HighlightAnimationAdditions/GM_FSHighlightAnimationAdditions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +248,7 @@
 				D79B6D4818366BB200A07182 /* Images.xcassets in Resources */,
 				D79B6D3A18366BB200A07182 /* InfoPlist.strings in Resources */,
 				D79B6D4318366BB200A07182 /* Main.storyboard in Resources */,
+				D79B6D6918366BD300A07182 /* Mask.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D79B6D6818366BD300A07182 /* GM_FSHighlightAnimationAdditions.m in Sources */,
 				D79B6D4618366BB200A07182 /* ViewController.m in Sources */,
 				D79B6D4018366BB200A07182 /* AppDelegate.m in Sources */,
 				D79B6D3C18366BB200A07182 /* main.m in Sources */,
