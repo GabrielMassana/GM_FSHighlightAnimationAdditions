@@ -18,9 +18,20 @@
 
 @interface UILabel (GM_FSHighlightAnimationAdditions)
 
+//Left To Right
 - (void)GM_setAnimationLTRWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount;
 - (void) GM_setTextWithChangeAnimationLTR:(NSString*)text;
+
+//Right To Left
 - (void)GM_setAnimationRTLWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount;
 - (void) GM_setTextWithChangeAnimationRTL:(NSString*)text;
+
+// Up To Down
+- (void)GM_setAnimationUTDWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount;
+- (void) GM_setTextWithChangeAnimationUTD:(NSString*)text;
+
+// Down To Up
+- (void)GM_setAnimationDTUWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount;
+- (void) GM_setTextWithChangeAnimationDTU:(NSString*)text;
 
 @end

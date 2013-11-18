@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7548CF918369830001C4E2D /* Mask2.png in Resources */ = {isa = PBXBuildFile; fileRef = D7548CF818369830001C4E2D /* Mask2.png */; };
 		D79B6D3018366BB100A07182 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B6D2F18366BB100A07182 /* Foundation.framework */; };
 		D79B6D3218366BB100A07182 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B6D3118366BB100A07182 /* CoreGraphics.framework */; };
 		D79B6D3418366BB100A07182 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D79B6D3318366BB100A07182 /* UIKit.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7548CF818369830001C4E2D /* Mask2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mask2.png; sourceTree = "<group>"; };
 		D79B6D2C18366BB100A07182 /* HighlightAnimationAdditions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighlightAnimationAdditions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D79B6D2F18366BB100A07182 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D79B6D3118366BB100A07182 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -164,6 +166,7 @@
 				D79B6D6518366BD300A07182 /* GM_FSHighlightAnimationAdditions.h */,
 				D79B6D6618366BD300A07182 /* GM_FSHighlightAnimationAdditions.m */,
 				D79B6D6718366BD300A07182 /* Mask.png */,
+				D7548CF818369830001C4E2D /* Mask2.png */,
 			);
 			name = GM_FSHighlightAnimationAdditions;
 			path = HighlightAnimationAdditions/GM_FSHighlightAnimationAdditions;
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D79B6D4818366BB200A07182 /* Images.xcassets in Resources */,
+				D7548CF918369830001C4E2D /* Mask2.png in Resources */,
 				D79B6D3A18366BB200A07182 /* InfoPlist.strings in Resources */,
 				D79B6D4318366BB200A07182 /* Main.storyboard in Resources */,
 				D79B6D6918366BD300A07182 /* Mask.png in Resources */,
@@ -479,6 +483,7 @@
 				D79B6D6018366BB200A07182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D79B6D6118366BB200A07182 /* Build configuration list for PBXNativeTarget "HighlightAnimationAdditionsTests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +492,7 @@
 				D79B6D6318366BB200A07182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

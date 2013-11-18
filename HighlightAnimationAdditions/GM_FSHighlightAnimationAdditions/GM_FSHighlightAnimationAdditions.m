@@ -12,6 +12,8 @@
 
 @implementation UILabel (GM_FSHighlightAnimationAdditions)
 
+//Left To Right
+
 - (void)GM_setAnimationLTRWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount
 {
     //repeatCount equals zero will cause the animation to repeat forever.
@@ -38,7 +40,7 @@
     maskAnim.byValue = [NSNumber numberWithFloat:self.frame.size.width];
     maskAnim.repeatCount = repeatCount; //HUGE_VALF will cause the animation to repeat forever.
     maskAnim.duration = duration;
-    [maskLayer addAnimation:maskAnim forKey:@"slideAnim"];
+    [maskLayer addAnimation:maskAnim forKey:@"slideAnimLTR"];
     
     self.layer.mask = maskLayer;
 
@@ -50,6 +52,7 @@
     [self GM_setAnimationLTRWithText:text andWithDuration:0 andWithRepeatCount:2.0f];
 }
 
+//Right To Left
 
 - (void)GM_setAnimationRTLWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount
 {
@@ -77,7 +80,7 @@
     maskAnim.byValue = [NSNumber numberWithFloat:self.frame.size.width * -1];
     maskAnim.repeatCount = repeatCount; // HUGE_VALF will cause the animation to repeat forever.
     maskAnim.duration = duration;
-    [maskLayer addAnimation:maskAnim forKey:@"slideAnim"];
+    [maskLayer addAnimation:maskAnim forKey:@"slideAnimLTR"];
     
     self.layer.mask = maskLayer;
 
@@ -87,6 +90,84 @@
 {
     [self GM_setAnimationRTLWithText:text andWithDuration:0 andWithRepeatCount:2.0f];
 }
+
+// Up To Down
+- (void)GM_setAnimationUTDWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount
+{
+    //repeatCount equals zero will cause the animation to repeat forever.
+    if (repeatCount == 0)
+    {
+        repeatCount = HUGE_VALF;
+    }
+    
+    self.text = text;
+    CALayer *maskLayer = [CALayer layer];
+    
+    // Mask image ends with 0.15 opacity on both sides. Set the background color of the layer
+    // to the same value so the layer can extend the mask image.
+    maskLayer.backgroundColor = [[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.15f] CGColor];
+    maskLayer.contents = (id)[[UIImage imageNamed:@"Mask2.png"] CGImage];
+    
+    // Center the mask image on 0.0 of the text layer, so it starts to the right
+    // of the text layer and moves to its left when we translate it by width.
+    maskLayer.contentsGravity = kCAGravityCenter;
+    maskLayer.frame = CGRectMake(0.0f, self.frame.size.height * -1, self.frame.size.width , self.frame.size.height * 2);
+    
+    // Animate the mask layer's horizontal position
+    CABasicAnimation *maskAnim = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    maskAnim.byValue = [NSNumber numberWithFloat:self.frame.size.height];
+    maskAnim.repeatCount = repeatCount; // HUGE_VALF will cause the animation to repeat forever.
+    maskAnim.duration = duration;
+    [maskLayer addAnimation:maskAnim forKey:@"slideAnimUTD"];
+    
+    self.layer.mask = maskLayer;
+
+}
+- (void) GM_setTextWithChangeAnimationUTD:(NSString*)text
+{
+    [self GM_setAnimationUTDWithText:text andWithDuration:0 andWithRepeatCount:2.0f];
+
+}
+
+
+// Down To Up
+- (void)GM_setAnimationDTUWithText:(NSString*)text andWithDuration: (CFTimeInterval) duration andWithRepeatCount: (float) repeatCount
+{
+    //repeatCount equals zero will cause the animation to repeat forever.
+    if (repeatCount == 0)
+    {
+        repeatCount = HUGE_VALF;
+    }
+    
+    self.text = text;
+    CALayer *maskLayer = [CALayer layer];
+    
+    // Mask image ends with 0.15 opacity on both sides. Set the background color of the layer
+    // to the same value so the layer can extend the mask image.
+    maskLayer.backgroundColor = [[UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.15f] CGColor];
+    maskLayer.contents = (id)[[UIImage imageNamed:@"Mask2.png"] CGImage];
+    
+    // Center the mask image on 0.0 of the text layer, so it starts to the right
+    // of the text layer and moves to its left when we translate it by width.
+    maskLayer.contentsGravity = kCAGravityCenter;
+    maskLayer.frame = CGRectMake(0.0f, 0, self.frame.size.width , self.frame.size.height * 2);
+    
+    // Animate the mask layer's horizontal position
+    CABasicAnimation *maskAnim = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    maskAnim.byValue = [NSNumber numberWithFloat:self.frame.size.height * -1];
+    maskAnim.repeatCount = repeatCount; // HUGE_VALF will cause the animation to repeat forever.
+    maskAnim.duration = duration;
+    [maskLayer addAnimation:maskAnim forKey:@"slideAnimDTU"];
+    
+    self.layer.mask = maskLayer;
+    
+}
+- (void) GM_setTextWithChangeAnimationDTU:(NSString*)text
+{
+    [self GM_setAnimationUTDWithText:text andWithDuration:0 andWithRepeatCount:2.0f];
+    
+}
+
 
 @end
 
