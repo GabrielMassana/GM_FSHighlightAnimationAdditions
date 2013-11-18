@@ -2,7 +2,7 @@ GM_FSHighlightAnimationAdditions
 ================================
 
 iPhone “slide to unlock” animation
-The project have LTR and RTL animations
+The project have LTR, RTL, Up to Down and Down to Up animations
 
 
 //
