@@ -5,12 +5,13 @@ iPhone “slide to unlock” animation
 The project have LTR, RTL, Up to Down and Down to Up animations
 
 
-//
-//Project based in this two stackoverflow posts:
-//
-//Pascal Bourque: http://stackoverflow.com/a/2778232/1381708
-//cberkley: http://stackoverflow.com/a/5710097/1381708
-//
+
+Project based in this two stackoverflow posts:
+
+Pascal Bourque: http://stackoverflow.com/a/2778232/1381708
+
+cberkley: http://stackoverflow.com/a/5710097/1381708
+
 
 repeatCount equals zero will cause the animation to repeat forever.
 
